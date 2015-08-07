@@ -1,4 +1,5 @@
 require './single_cashier'
+require './multiple_cashier'
 
 inputs = []
 ARGV.each_with_index do |arg|
@@ -12,4 +13,6 @@ end
 
 p inputs
 
-p SingleCashier.calcurate(price: inputs[0][:price], number: inputs[0][:number], region: inputs[0][:region])
+MultipleCashier.calcurate(inputs)
+
+#p SingleCashier.calcurate(price: inputs[0][:price], number: inputs[0][:number], region: inputs[0][:region])
