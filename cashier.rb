@@ -1,3 +1,3 @@
-price = ARGV[0]
-number = ARGV[1]
-region = ARGV[2]
+p price = ARGV[0]
+p number = ARGV[1]
+p region = ARGV[2]
