@@ -1,5 +1,15 @@
 require './single_cashier'
-p price = ARGV[0]
-p number = ARGV[1]
-p region = ARGV[2]
-p SingleCashier.calcurate(price: price, number: number, region: region)
+
+inputs = []
+ARGV.each_with_index do |arg|
+  price, number, region = arg.split(',')
+  inputs << {
+    price: price,
+    number: number,
+    region: region,
+  }
+end
+
+p inputs
+
+p SingleCashier.calcurate(price: inputs[0][:price], number: inputs[0][:number], region: inputs[0][:region])
