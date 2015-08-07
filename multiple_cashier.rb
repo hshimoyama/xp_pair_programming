@@ -9,12 +9,20 @@ class MultipleCashier
   }
 
   def self.calcurate(inputs)
-    inputs.inject(0) do |r,input|
+    total_price = inputs.inject(0) do |r,input|
       r + SingleCashier.calcurate(
         price: input[:price],
         number: input[:number],
         region: input[:region]
       )
     end
+
+    discount_rate  = 1.0
+    DISCOUNT_RATES.each do |price,rate|
+      discount_rate  = rate if total_price >= price
+    end
+    #total_price * discount_rate
+    p discount_rate
+    total_price
   end
 end
