@@ -9,6 +9,7 @@ class SingleCashier
   }
 
   def self.calcurate(price:, number:, region: )
+    p AREA_TAXES[region]
     tax_rate = 1.08
     price.to_i * number.to_i * tax_rate
   end
