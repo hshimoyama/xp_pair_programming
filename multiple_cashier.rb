@@ -21,8 +21,6 @@ class MultipleCashier
     DISCOUNT_RATES.each do |price,rate|
       discount_rate  = rate if total_price >= price
     end
-    #total_price * discount_rate
-    p discount_rate
-    total_price
+    total_price * discount_rate
   end
 end
