@@ -13,6 +13,6 @@ end
 
 p inputs
 
-MultipleCashier.calcurate(inputs)
+p MultipleCashier.calcurate(inputs)
 
 #p SingleCashier.calcurate(price: inputs[0][:price], number: inputs[0][:number], region: inputs[0][:region])
