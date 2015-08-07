@@ -1,5 +1,5 @@
 class MultipleCashier
   def self.calcurate(inputs)
-    p intpus
+    p inputs
   end
 end
